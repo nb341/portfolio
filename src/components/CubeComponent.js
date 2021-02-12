@@ -1,4 +1,4 @@
-import './styles/cube.scss';
+
 
 export default function Cube(){
     return(

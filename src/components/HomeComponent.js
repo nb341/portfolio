@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Cube from './CubeComponent';
-import './styles/home.scss';
+
 
 
 

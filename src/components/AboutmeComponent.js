@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import './styles/aboutme.scss';
 class AboutMe extends Component{
     
-    componentDidMount(){
+    componentWillMount(){
         document.title="Narindra Balkissoon: About Me";
     }
     render(){
