@@ -1,10 +1,8 @@
-
-
 $navBackground: #160f30;
 $textColour: #a72693;
 .navbar{
     background: $navBackground;
-    color: $textColour;
+    color: $textColour !important;
     height: 100vh;
     width: 2.5%;
     display: flex;
@@ -25,14 +23,24 @@ $textColour: #a72693;
   
 }
 
-// .nav-top{
+
+
+
+.nav-top{
     
     
-// }
-// .nav-bottom{
+}
+.nav-bottom{
    
-// }
+}
 
 .nav-item{
     padding: 2% 7%;
+}
+
+.nav-icon{
+   color: $textColour;
+}
+.nav-icon :hover{
+    color: #eae7af;
 }
