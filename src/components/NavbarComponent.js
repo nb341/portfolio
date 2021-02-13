@@ -13,7 +13,7 @@ class Navbar extends Component{
     render(){
         
         return(
-            <div activeClassName="navbar">
+            <div className="navbar">
                 
                 <nav className="nav-top">
                     <ul className="nav-items">
