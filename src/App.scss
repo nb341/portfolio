@@ -20,28 +20,4 @@ body{
   color: white;
 }
 
-$navBackground: #160f30;
-$textColour: #a72693;
-.navbar{
-    background: $navBackground;
-    color: $textColour;
-    height: 100vh;
-    width: 2.5%;
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-start;
-    justify-content: space-around;
-}
-
-
-.navbar>ul{
-  list-style-type: none;
-  a{
-      text-decoration: none;
-  }
-  a:hover{
-      color: #eae7af;
-  }
-  
-}
 
