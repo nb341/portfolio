@@ -1,4 +1,4 @@
-
+import { FaPython } from 'react-icons/fa';
 
 export default function Cube(){
     return(
