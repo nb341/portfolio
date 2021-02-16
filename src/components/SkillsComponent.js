@@ -9,7 +9,7 @@ export default function Skills(){
         <div className="main-skills">
             <h1 className="title">
                     My Skills
-                </h1>
+            </h1>
         <div className="skills-container">
             <div className="languages">
                 <span><FaPython className="icon-color"/> Python</span>    

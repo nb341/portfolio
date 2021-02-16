@@ -1,0 +1,16 @@
+.portfolio-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative; 
+    top: 50px;
+    p{
+        margin: auto;
+    }
+    a{
+        color: #a72693;
+    }
+    a:hover{
+        color: #eae7af;
+    }
+}
