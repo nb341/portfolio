@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Map from "./MapComponent";
 //import Map from './MapComponent';
 class AboutMe extends Component{
     
@@ -23,8 +23,9 @@ class AboutMe extends Component{
                      <br/>Seeking freelance full-stack opportunities in small to medium size projects or a full time position.
                 </p>
                 
-                    <div id="mapid">
-                        <p>Add map of home country</p>
+                    <div style={{margin: 'auto'}} id="mapid">
+                        <h3 className="title">I live somewhere on this map</h3>
+                        <Map/>
                     </div>
                 
             </div>

@@ -8,7 +8,35 @@ import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import CodeIcon from '@material-ui/icons/Code';
+
+
 class Navbar extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            homeHover: false,
+            skillsHover: false,
+            portfolioHover: false,
+            aboutHover: false,
+            contactHover: false,
+            gitHover: false,
+            linkedinHover: false,
+            codeHover: false
+        };
+        this.homeHover = this.homeHover.bind(this);
+        
+    }
+     
+    homeHover(){
+        this.setState(this.toggleHomeHover);
+    }
+
+    toggleHomeHover(state){
+        return{
+            homeHover: !state.homeHover,
+        }
+    }
 
     render(){
         
@@ -18,7 +46,16 @@ class Navbar extends Component{
                 <nav className="nav-top">
                     <ul className="nav-items">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/"><HomeOutlinedIcon className="nav-icon" style={{fontSize: 40}}/></Link>
+                            <Link 
+                            className="nav-link" 
+                            to="/"  
+                            onMouseEnter={this.homeHover}
+                            onMouseLeave={this.homeHover}
+                            >
+                              {(!this.state.homeHover) ? <HomeOutlinedIcon className="nav-icon" style={{fontSize: 40}}/> : <span
+                               
+                               className="nav-icon">Home</span>} 
+                                </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/aboutme"><PersonOutlineOutlinedIcon className="nav-icon" style={{fontSize: 40}}/></Link>
