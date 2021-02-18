@@ -49,25 +49,35 @@ class Navbar extends Component{
                             <Link 
                             className="nav-link" 
                             to="/"  
-                            onMouseEnter={this.homeHover}
-                            onMouseLeave={this.homeHover}
+                            
                             >
-                              {(!this.state.homeHover) ? <HomeOutlinedIcon className="nav-icon" style={{fontSize: 40}}/> : <span
-                               
-                               className="nav-icon">Home</span>} 
+                              <HomeOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
+                               <span className="nav-icon-hover">Home</span>
                                 </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/aboutme"><PersonOutlineOutlinedIcon className="nav-icon" style={{fontSize: 40}}/></Link>
+                            <Link className="nav-link" to="/aboutme">
+                                <PersonOutlineOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
+                                <span className="nav-icon-hover">About Me</span>
+                                </Link>
+                            
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/skills"><SettingsOutlinedIcon className="nav-icon" style={{fontSize: 40}}/></Link>
+                            <Link className="nav-link" to="/skills">
+                                <SettingsOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
+                                <span className="nav-icon-hover">Skills</span>
+                                </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/portfolio"><BusinessCenterOutlinedIcon className="nav-icon" style={{fontSize: 40}}/></Link>
+                            <Link className="nav-link" to="/portfolio">
+                                <BusinessCenterOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
+                                <span className="nav-icon-hover">Portfolio</span>
+                                </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/contact"><EmailOutlinedIcon className="nav-icon" style={{fontSize: 40}}/></Link>
+                            <Link className="nav-link" to="/contact"><EmailOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
+                            <span className="nav-icon-hover">Contact Me</span>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
@@ -82,6 +92,7 @@ class Navbar extends Component{
                             target="_blank"><GitHubIcon
                             className="nav-icon"
                             style={{fontSize: 40}}/>
+                            <span className="nav-icon-hover">Github</span>
                             </a>
                         </li>
                         <li className="nav-item">
@@ -92,6 +103,7 @@ class Navbar extends Component{
                         target="_blank"
                         >
                             <LinkedInIcon className="nav-icon" style={{fontSize: 40}}/>
+                            <span className="nav-icon-hover">LinkedIn</span>
                         </a>
                         </li>
                         <li className="nav-item">
@@ -102,6 +114,7 @@ class Navbar extends Component{
                             href="https://codepen.io/nb341/"
                             >
                                 <CodeIcon className="nav-icon" style={{fontSize: 40}}/>
+                                <span className="nav-icon-hover">CodePen</span>
                             </a>
                         </li>
                     </ul>

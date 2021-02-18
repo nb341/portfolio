@@ -4,7 +4,7 @@ $textColour: #a72693;
     background: $navBackground;
     color: $textColour !important;
     height: 100vh;
-    width: 2.5%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
@@ -12,13 +12,29 @@ $textColour: #a72693;
 }
 
 
-.navbar>ul{
+.navbar ul{
   list-style-type: none;
-  a{
+  .nav-link{
       text-decoration: none;
+      padding: 0 5px;
   }
-  a:hover{
-      color: #eae7af;
+
+  .nav-item{
+      width: 100%;
+  }
+
+  .nav-link .nav-icon-hover,
+  .nav-link:hover .nav-icon{
+      display: none;
+  }
+
+  .nav-link:hover .nav-icon-hover{
+      display: inline;
+      font-size: 12px;
+      font-weight: 700;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
   }
   
 }
@@ -35,7 +51,7 @@ $textColour: #a72693;
 }
 
 .nav-item{
-    padding: 2% 7%;
+    
 }
 
 .nav-icon{
