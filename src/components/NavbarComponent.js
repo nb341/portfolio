@@ -8,7 +8,7 @@ import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import CodeIcon from '@material-ui/icons/Code';
-
+import '../styles/navbar.scss';
 
 class Navbar extends Component{
 
