@@ -4,6 +4,7 @@ import Portfolio from './PortfolioComponent';
 import AboutMe from './AboutmeComponent';
 import ContactMe from './ContactmeComponent';
 import Skills from './SkillsComponent';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 function Main(){
@@ -11,7 +12,7 @@ function Main(){
         <div className="container" >
             
             <Navbar />
-
+            
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/home" component={Home}/>
@@ -21,6 +22,7 @@ function Main(){
                 <Route exact path="/portfolio" component={Portfolio}/>
                 <Redirect to="/home"/>
             </Switch>
+            
             
             
         </div>

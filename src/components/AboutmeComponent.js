@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Map from "./MapComponent";
+import pro from "../turing_profile.jpg";
 //import Map from './MapComponent';
 class AboutMe extends Component{
     
@@ -15,6 +16,7 @@ class AboutMe extends Component{
                 <h1 className="title">
                     About Me
                 </h1>
+                <img id="pro" src={pro} alt="developer" />
                 <p class="about-text">
                     I get more compilation errors coding in React than I ever did in C. 😐😐😐😐
                     <br/>How do I keep count you may ask? I count the number of bruises on my ego.
