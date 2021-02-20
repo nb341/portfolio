@@ -4,7 +4,6 @@ import Portfolio from './PortfolioComponent';
 import AboutMe from './AboutmeComponent';
 import ContactMe from './ContactmeComponent';
 import Skills from './SkillsComponent';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 function Main(){
