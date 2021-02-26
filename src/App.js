@@ -9,8 +9,12 @@ import './styles/portfolio.scss';
 import './styles/map.scss';
 import Main from './components/MainComponent'; 
 import { BrowserRouter } from 'react-router-dom';
+
+
 function App() {
+  
   return (
+    
     
     <div className="App">
       <BrowserRouter>
