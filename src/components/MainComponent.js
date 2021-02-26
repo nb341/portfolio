@@ -4,14 +4,17 @@ import Portfolio from './PortfolioComponent';
 import AboutMe from './AboutmeComponent';
 import ContactMe from './ContactmeComponent';
 import Skills from './SkillsComponent';
+import Player from './PlayerComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 function Main(){
+   
+
     return(
         <div className="container" >
             
             <Navbar />
-            
+            <Player />
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/home" component={Home}/>
