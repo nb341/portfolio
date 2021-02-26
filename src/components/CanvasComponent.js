@@ -23,9 +23,9 @@ const texts = [
       width = 500,
       height = 500,
       radius = 150,
-      padding = 0,
+      padding = 5,
       fontSize = 16,
-      tilt = 0,
+      tilt = 1.2,
       initialVelocityX = 0,
       initialVelocityY = 0,
       initialRotationX = 0,
@@ -78,7 +78,7 @@ const texts = [
     function render() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-      let ix = 0, iz = 0, i = 1;
+      let ix = 0, iz = 0; //i = 1
       for (const text of texts) {
         const degZ = (π/(counts.length-1)) * iz;
         const degX = (2*π/counts[iz]) * ix;
@@ -93,7 +93,7 @@ const texts = [
         [x,y] = rot(x, y, rx);
   
         // convert to cartesian and then draw.
-        const alpha = 0.6 + 0.4 * (x/radius);
+       // const alpha = 0.6 + 0.4 * (x/radius);
         const size = fontSize + 2 + 5*(x/radius);
         ctx.fillStyle = `#eae7af`;
         ctx.font = `${size}px "Helvetica Neue", sans-serif`;
@@ -105,7 +105,7 @@ const texts = [
           iz++;
           ix = counts[iz] - 1;
         }
-        i++;
+        //i++;
       }
     }
   
