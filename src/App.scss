@@ -9,12 +9,13 @@ body{
   font-size: 24px;
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
+  background-color: #282c34;
 }
 
 
 
 .container {
-  background-color: #282c34;
+  
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -29,25 +30,4 @@ body{
   font-size: 3.25rem;
   color: #a72693;
   text-align: center;
-}
-.page-enter {
-  opacity: 0.01;
-  transform: translateX(-100%);
-}
-
-.page-enter-active {
-  opacity: 1;
-  transform: translateX(0%);
-  transition: all 300ms ease-in;
-}
-
-.page-exit {
-  opacity: 1;
-  transform: translateX(0%);
-}
-
-.page-exit-active {
-  opacity: 0.01;
-  transform: translateX(100%);
-  transition: all 300ms ease-out;
 }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Cube from './CubeComponent';
+import Canvas from './CanvasComponent';
 
 
 
@@ -17,11 +17,7 @@ class Home extends Component{
                 </div>
 
                 <div className="home-cube">
-                    <Cube />
-                    <p>A work in progress</p>
-                    <p>Stay tuned on this episode of <span className="status-cube">Will He Ever Finish His Portfolio Site</span>to see if the rotating
-                    skills cube is ever finised.
-                    </p>
+                    <Canvas/>
                 </div>
                 
             </div>

@@ -4,7 +4,7 @@
     position: relative;
     top: 50px;
     margin: 0 auto;
-    width: auto;
+    width: calc(100%-70px);
 }
 
 .contact-section{
@@ -28,3 +28,10 @@
         color:#eae7af;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    .contact-container{
+        font-size: 16px;
+    }
+  }

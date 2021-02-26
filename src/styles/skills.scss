@@ -2,7 +2,7 @@
 .main-skills{
     display: flex;
     flex-direction: column;
-    min-width: 80%;
+    width: calc(100%-70px);
     position: relative;
     top: 50px;
     margin: 0 auto;

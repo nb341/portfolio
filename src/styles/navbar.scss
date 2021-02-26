@@ -4,7 +4,7 @@ $textColour: #a72693;
     background: $navBackground;
     color: $textColour !important;
     height: 100vh;
-    width: auto;
+    width: 70px;
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
@@ -18,6 +18,7 @@ $textColour: #a72693;
       text-decoration: none;
       padding: 0 5px;
       color: $textColour;
+      
   }
 
   .nav-item{
@@ -50,4 +51,5 @@ $textColour: #a72693;
 }
 .nav-link :hover{
     color: #eae7af;
+    
 }
