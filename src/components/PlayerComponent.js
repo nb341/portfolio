@@ -8,7 +8,7 @@ const Player = ({ url }) => {
   return (
     <div style={{display: 'none'}}>
             <ReactAudioPlayer
-                src='../assets/Foreigner_That_Was_Yesterday.mp3'
+                src='../assets/music/Foreigner_That_Was_Yesterday.mp3'
                 autoPlay
                 controls
                 preload="none"

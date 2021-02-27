@@ -1,7 +1,7 @@
 import { Link} from 'react-router-dom';
 import {FaHome, FaBriefcase} from 'react-icons/fa';
-import {AiOutlineSetting, AiFillGithub, AiFillLinkedin, AiFillCodepenCircle} from 'react-icons/ai';
-import {BsPerson} from 'react-icons/bs';
+import {AiFillSetting, AiFillGithub, AiFillLinkedin, AiFillCodepenCircle} from 'react-icons/ai';
+import {RiAccountCircleFill} from 'react-icons/ri';
 import {GrMail} from 'react-icons/gr';
 import React, { useEffect, useState } from "react";
 function getWindowDimensions() {
@@ -51,9 +51,9 @@ function Navbar(){
                 <li className="nav-item"><Link className="nav-link" to="/">
                     <FaHome style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">Home</span></Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/aboutme">
-                    <BsPerson style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">About Me</span></Link></li>
+                    <RiAccountCircleFill style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">About Me</span></Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/skills">
-                    <AiOutlineSetting style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">Skills</span></Link></li>
+                    <AiFillSetting style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">Skills</span></Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/portfolio">
                     <FaBriefcase style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">Portfolio</span></Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/contactme">
