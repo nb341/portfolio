@@ -4,7 +4,7 @@ const texts = [
     'C/C++', 'Java', 'Python', 'PHP', 'JavaScript', 'SQL', 'MATLAB',
     'HTML', 'CSS', 'XML', 'JSON', 'Redux',
     'Bootstrap', 'Material-UI', 'jQuery', 'ReactJS', 'Reactstrap', 'Django', 'Pandas', 'NumPy',
-    'MySQL', 'PostgreSQL', 'MongoDB', 'Oracle','Git', 'GitHub', 'NodeJS'
+    'MySQL', 'PostgreSQL', 'MongoDB', 'Oracle','Git', 'GitHub', 'NodeJS', 'AJAX'
   ];
   const counts = [1,2,3,4,5,6,7,6,5,4,3,2,1];
   
