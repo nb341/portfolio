@@ -10,7 +10,7 @@ function Map() {
     <MapContainer
       center={INITIAL_MAP_CONFIG.center}
       zoom={INITIAL_MAP_CONFIG.zoom}
-      scrollWheelZoom={true}
+      scrollWheelZoom={false}
     >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

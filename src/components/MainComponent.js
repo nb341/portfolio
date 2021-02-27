@@ -1,36 +1,26 @@
-import Home from './HomeComponent';
+import React from "react";
 import Navbar from './NavbarComponent';
-import Portfolio from './PortfolioComponent';
 import AboutMe from './AboutmeComponent';
 import ContactMe from './ContactmeComponent';
+import Portfolio from './PortfolioComponent';
 import Skills from './SkillsComponent';
+import Home from './HomeComponent';
 import Player from './PlayerComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
-
-function Main(){
-   
-
+export default function Main(){
     return(
-        <div className="container" >
-            
-            <Navbar />
-            <Player />
-            <Switch>
+    <div id="page-wrapper">
+        <Player/>
+        <Navbar/>
+        <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/home" component={Home}/>
                 <Route exact path="/aboutme" component={AboutMe}/>
-                <Route exact path="/contact" component={ContactMe}/>
+                <Route exact path="/contactme" component={ContactMe}/>
                 <Route exact path="/skills" component={Skills}/>
                 <Route exact path="/portfolio" component={Portfolio}/>
                 <Redirect to="/home"/>
-            </Switch>
-            
-            
-            
-        </div>
-        
-        
-    )
+        </Switch>
+    </div>
+    );
 }
-
-export default Main;

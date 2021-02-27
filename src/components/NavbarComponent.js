@@ -1,129 +1,77 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
-import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
-import BusinessCenterOutlinedIcon from '@material-ui/icons/BusinessCenterOutlined';
-import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import CodeIcon from '@material-ui/icons/Code';
-import '../styles/navbar.scss';
+import { Link} from 'react-router-dom';
+import {FaHome, FaBriefcase} from 'react-icons/fa';
+import {AiOutlineSetting, AiFillGithub, AiFillLinkedin, AiFillCodepenCircle} from 'react-icons/ai';
+import {BsPerson} from 'react-icons/bs';
+import {GrMail} from 'react-icons/gr';
+import React, { useEffect, useState } from "react";
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+  
+  function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = useState(
+      getWindowDimensions()
+    );
+  
+    useEffect(() => {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+  
+    return windowDimensions;
+  }
 
-class Navbar extends Component{
+  
 
-    constructor(props){
-        super(props);
-        this.state = {
-            homeHover: false,
-            skillsHover: false,
-            portfolioHover: false,
-            aboutHover: false,
-            contactHover: false,
-            gitHover: false,
-            linkedinHover: false,
-            codeHover: false
-        };
-        this.homeHover = this.homeHover.bind(this);
-        
-    }
-     
-    homeHover(){
-        this.setState(this.toggleHomeHover);
-    }
 
-    toggleHomeHover(state){
-        return{
-            homeHover: !state.homeHover,
+
+const iconSize = {fontSize: 30};
+
+function Navbar(){
+   const { width } = useWindowDimensions();
+   const [navSize, setNavSize] = useState({maxWidth: 40});
+
+   useEffect(()=>{
+        if(width>780){
+            setNavSize({maxWidth: 30})
         }
-    }
-
-    render(){
-        
-        return(
-            <div className="navbar">
-                
-                <nav className="nav-top">
-                    <ul className="nav-items">
-                        <li className="nav-item">
-                            <Link 
-                            className="nav-link" 
-                            to="/"  
-                            
-                            >
-                              <HomeOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
-                               <span className="nav-icon-hover">Home</span>
-                                </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/aboutme">
-                                <PersonOutlineOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
-                                <span className="nav-icon-hover">About Me</span>
-                                </Link>
-                            
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/skills">
-                                <SettingsOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
-                                <span className="nav-icon-hover">Skills</span>
-                                </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/portfolio">
-                                <BusinessCenterOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
-                                <span className="nav-icon-hover">Portfolio</span>
-                                </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/contact"><EmailOutlinedIcon className="nav-icon" style={{fontSize: 40}}/>
-                            <span className="nav-icon-hover">Contact Me</span>
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
-                
-                <nav className="nav-bottom">
-                    <ul className="nav-items">
-                        <li className="nav-item">
-                            <a 
-                            rel="noopener noreferrer" 
-                            className="nav-link" 
-                            href="https://github.com/nb341/" 
-                            target="_blank"><GitHubIcon
-                            className="nav-icon"
-                            style={{fontSize: 40}}/>
-                            <span className="nav-icon-hover">Github</span>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                        <a 
-                        rel="noopener noreferrer" 
-                        className="nav-link" 
-                        href="https://www.linkedin.com/in/narindra-balkissoon/" 
-                        target="_blank"
-                        >
-                            <LinkedInIcon className="nav-icon" style={{fontSize: 40}}/>
-                            <span className="nav-icon-hover">LinkedIn</span>
-                        </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                            rel="noopener noreferrer" 
-                            className="nav-link" 
-                            target="_blank" 
-                            href="https://codepen.io/nb341/"
-                            >
-                                <CodeIcon className="nav-icon" style={{fontSize: 40}}/>
-                                <span className="nav-icon-hover">CodePen</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                
-            </div>
+    }, [width, navSize]);
+  
+    return(
+        <div className="navbar" style={{maxWidth:navSize}}>
+            <ul>
+                <li className="nav-item"><Link className="nav-link" to="/">
+                    <FaHome style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">Home</span></Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/aboutme">
+                    <BsPerson style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">About Me</span></Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/skills">
+                    <AiOutlineSetting style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">Skills</span></Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/portfolio">
+                    <FaBriefcase style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">Portfolio</span></Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/contactme">
+                    <GrMail style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">Contact Me</span></Link></li>
+            </ul>
+            <ul>
+                <li className="nav-item">
+                    <a className="nav-link" target="_blank" rel="noreferrer" href="https://github.com/nb341/">
+                        <AiFillGithub style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">Github</span></a></li>
+                <li className="nav-item"><a className="nav-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/narindra-balkissoon/">
+                    <AiFillLinkedin style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">LinkedIn</span></a></li>
+                <li className="nav-item">
+                    <a rel="noreferrer" className="nav-link" target="_blank" href="https://codepen.io/nb341/">
+                    <AiFillCodepenCircle style={iconSize} className="nav-icon"/> <span className="nav-icon-hover">CodePen</span></a></li>
+            </ul>
             
-        );
-    }
+        </div>
+    );
 }
 
 export default Navbar;

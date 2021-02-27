@@ -4,10 +4,9 @@ const texts = [
     'C/C++', 'Java', 'Python', 'PHP', 'JavaScript', 'SQL', 'MATLAB',
     'HTML', 'CSS', 'XML', 'JSON', 'Redux',
     'Bootstrap', 'Material-UI', 'jQuery', 'ReactJS', 'Reactstrap', 'Django', 'Pandas', 'NumPy',
-    'MySQL', 'PostgreSQL', 'MongoDB', 'Oracle',
-    'Google Maps API', 'Native Android Development', 'Web Development', 'Git', 'GitHub',
+    'MySQL', 'PostgreSQL', 'MongoDB', 'Oracle','Git', 'GitHub', 'NodeJS'
   ];
-  const counts = [1,2,4,5,4,2,1];
+  const counts = [1,2,3,4,5,6,7,6,5,4,3,2,1];
   
   const options = {
     tilt: Math.PI / 9,
@@ -23,9 +22,9 @@ const texts = [
     const {
       width = 500,
       height = 500,
-      radius = 150,
-      padding = 5,
-      fontSize = 16,
+      radius = 200,
+      padding = 50,
+      fontSize = 13,
       tilt = 1.2,
       initialVelocityX = 0,
       initialVelocityY = 0,
@@ -43,7 +42,7 @@ const texts = [
     // Hi-DPI support
     canvas.width = width * 2;
     canvas.height = height * 2;
-    canvas.style.width = `50%`;
+    canvas.style.width = `${canvas.width}`;
     canvas.style.height = `${height}px`;
     ctx.scale(2,2); 
   
@@ -146,7 +145,7 @@ const Canvas = props => {
   useEffect(() => {
     const canvas = canvasRef.current
     wordSphere(canvas, texts, counts, options);
-  })
+  },[])
   
   return <canvas ref={canvasRef} {...rest}/>
 }

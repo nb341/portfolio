@@ -4,50 +4,50 @@ import {SiCsharp, SiJquery, SiMaterialUi, SiDjango, SiLeaflet, SiPostgresql, SiM
 import {AiOutlineConsoleSql} from 'react-icons/ai';
 import {HiOutlineDesktopComputer} from 'react-icons/hi';
 import {VscJson} from 'react-icons/vsc';
+
 export default function Skills(){
     return(
-        <div className="main-skills">
-            <h1 className="title">
-                    My Skills
-            </h1>
-        <div className="skills-container">
-            <div className="languages">
-                <span><FaPython className="icon-color"/> Python</span>    
-                <span><FaJava className="icon-color"/> Java</span>
-                <span><FaPhp className="icon-color"/> PHP</span>
-                <span><SiCsharp className="icon-color"/> C#</span>
-                <span><HiOutlineDesktopComputer className="icon-color"/> C/C++</span>
-                <span><AiOutlineConsoleSql className="icon-color"/> SQL</span>
-                <span><IoLogoJavascript className="icon-color"/> JavaScript</span>  
-                <span><FaHtml5 className="icon-color"/> HTML</span>
-                <span><FaCss3Alt className="icon-color"/> CSS</span>
-            </div>
-            <div className="frameworks">
-                <span><HiOutlineDesktopComputer className="icon-color"/> Animate.css</span>
-                <span><FaBootstrap className="icon-color"/> Bootstrap/Reactstrap</span>
-                <span><FaReact className="icon-color"/> ReactJS</span>
-                <span><SiJquery className="icon-color"/> jQuery</span>
-                <span><SiMaterialUi className="icon-color"/> Material-UI</span>
-                <span><FaFontAwesome className="icon-color"/> Font Awesome</span>
-                <span><SiDjango className="icon-color"/> Django</span>
-            </div>
-            <div className="apis">
-                <span><FaGoogle className="icon-color"/> Google Maps</span>
-                <span><HiOutlineDesktopComputer className="icon-color"/> XML</span>
-                <span><VscJson className="icon-color"/> JSON</span>
-                <span><HiOutlineDesktopComputer className="icon-color"/> Fetch API</span>
-                <span><HiOutlineDesktopComputer className="icon-color"/> AJAX</span>
-                <span><SiLeaflet className="icon-color"/> Leaflet JS</span>
-            </div>
-            <div className="databases">
-                <span><SiPostgresql className="icon-color"/> PostgreSQL</span>
-                <span><SiMysql className="icon-color"/> MySQL</span>
-                <span><SiMariadb className="icon-color"/> MariaDB</span>
-                <span><SiOracle className="icon-color"/> OracleSQL</span>
-                <span><SiMongodb className="icon-color"/> MongoDB</span>
+        <div className="container">
+        <div className="skills">
+            <h1 className="title">My Skills</h1>
+            <div className="skillslist">
+                <ul>
+                    <li><FaPython className="icon-color"/> Python</li>
+                    <li><FaJava className="icon-color"/> Java</li>
+                    <li><FaPhp className="icon-color"/> PHP</li>
+                    <li><SiCsharp className="icon-color"/> C#</li>
+                    <li><HiOutlineDesktopComputer className="icon-color"/> C/C++</li>
+                    <li><AiOutlineConsoleSql className="icon-color"/> SQL</li>
+                    <li><IoLogoJavascript className="icon-color"/> JavaScript</li>
+                    <li><FaHtml5 className="icon-color"/> HTML</li>
+                    <li><FaCss3Alt className="icon-color"/> CSS</li>
+                </ul>
+                <ul>
+                    <li><HiOutlineDesktopComputer className="icon-color"/> Animate.css</li>
+                    <li><FaBootstrap className="icon-color"/> Bootstrap/Reactstrap</li>
+                    <li><FaReact className="icon-color"/> ReactJS</li>
+                    <li><SiJquery className="icon-color"/> Query</li>
+                    <li><SiMaterialUi className="icon-color"/> Material-UI</li>
+                    <li><FaFontAwesome className="icon-color"/> Font Awesome</li>
+                    <li><SiDjango className="icon-color"/> Django</li>
+                </ul>
+                <ul>
+                    <li><FaGoogle className="icon-color"/> Google Maps</li>
+                    <li><HiOutlineDesktopComputer className="icon-color"/> XML</li>
+                    <li><VscJson className="icon-color"/> Fetch API</li>
+                    <li><HiOutlineDesktopComputer className="icon-color"/> AJAX</li>
+                    <li><SiLeaflet className="icon-color"/> LeafletJS</li>
+                </ul>
+                <ul>
+                    <li><SiPostgresql className="icon-color"/> PostgreSQL</li>
+                    <li><SiMysql className="icon-color"/> MariaDB</li>
+                    <li><SiOracle className="icon-color"/> OracleSQL</li>
+                    <li><SiMysql className="icon-color"/> MySQL</li>
+                    <li><SiMariadb className="icon-color"/> MariaDB</li>
+                    <li><SiMongodb className="icon-color"/> MongoDB</li>
+                </ul>
             </div>
         </div>
         </div>
     )
 }
-
