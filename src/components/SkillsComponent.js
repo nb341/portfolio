@@ -26,7 +26,7 @@ export default function Skills(){
                     <li><HiOutlineDesktopComputer className="icon-color"/> Animate.css</li>
                     <li><FaBootstrap className="icon-color"/> Bootstrap/Reactstrap</li>
                     <li><FaReact className="icon-color"/> ReactJS</li>
-                    <li><SiJquery className="icon-color"/> Query</li>
+                    <li><SiJquery className="icon-color"/> jQuery</li>
                     <li><SiMaterialUi className="icon-color"/> Material-UI</li>
                     <li><FaFontAwesome className="icon-color"/> Font Awesome</li>
                     <li><SiDjango className="icon-color"/> Django</li>
