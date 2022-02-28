@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Link, Image, ButtonGroup, Button, AlertDialog } from "@chakra-ui/react";
+import { Box, Text, Link, Image, ButtonGroup, Button } from "@chakra-ui/react";
 import imgUploader from '../assets/image-uploader.png';
 import patientForm from '../assets/Patient-Registration-Form.png';
 import mapDragger from "../assets/mapDragger.png";
