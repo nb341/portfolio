@@ -1,27 +1,66 @@
-
-
-// import './styles/home.scss';
-// import './styles/aboutme.scss';
-// import './styles/cube.scss';
-// import './styles/skills.scss';
-// import './styles/contact.scss';
-// import './styles/portfolio.scss';
-// import './styles/map.scss';
-import Main from './components/MainComponent'; 
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import {
+  ChakraProvider,
+  Center,
+  Box,
+  Flex,
+  extendTheme
+} from '@chakra-ui/react';
+import PersonalDetails from './components/PersonalDetails';
+import Skills from './components/Skills';
+import Certificates from './components/Certificates';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+const theme = extendTheme({
+  styles: {
+    global: {
+      // styles for the `body`
+      body: {
+        bg: '#160f30'
+      },
+      fonts: {
+        body: 'Montserrat, sans-serif;'
+      }
+    },
+  },
+})
 
 
 function App() {
-  
   return (
-    
-    
-    <div className="App">
-      <BrowserRouter>
-      <Main/>
-      </BrowserRouter>
-    </div>
-   
+    <ChakraProvider theme={theme}>
+      <Center m={8} scrollBehavior="smooth">
+        <Flex direction={{lg:'row', base: 'column'}}>
+          <Flex flexDirection={'column'} mr={{lg: '32px'}}>
+            <Box>
+              <PersonalDetails/>
+            </Box>
+            <Box mt={'32px'}>
+              <Experience/>
+            </Box>
+            <Box mt={'32px'}>
+              <Certificates/>
+            </Box>
+          </Flex>
+
+        
+        
+          <Box mt={{base: '32px', lg: '0px'}}>
+              <Flex direction={'column'}>
+                  <Box>
+                    <Skills/>
+                  </Box>
+                  <Box marginTop={'32px'}>
+                    <Projects/>
+                  </Box>
+              </Flex>
+          </Box>
+        </Flex>
+        
+
+      </Center>
+
+    </ChakraProvider>
   );
 }
 
