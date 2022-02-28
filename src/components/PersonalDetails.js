@@ -25,7 +25,7 @@ export default function PersonalDetails(){
                     />
                     <Box alignSelf={'start'}>
                         <Text align={'left'} fontWeight={600} fontSize={'24px'} color={'pink.600'}>Narindra Balkissoon</Text>
-                        <Text fontSize={'18px'} color={'pink.400'}>Full-stack Developer</Text>
+                        <Text fontSize={'18px'} color={'pink.400'}>Software Developer</Text>
                     </Box>
                     <VStack width={'100%'} paddingTop={3} spacing={0} color={'yellow.200'}>
                         <Text fontSize={'18px'} alignSelf={'start'} padding={0} >  <Flex><Box color={'pink.600'} as={'span'}><MdEmail style={{paddingRight: "2px", fontSize: "28px"}} /></Box>narindra_balkissoon@outlook.com</Flex></Text>
@@ -36,8 +36,9 @@ export default function PersonalDetails(){
                             <Flex><Text as={'span'} color={'pink.600'}><AiFillGithub style={{paddingRight: "2px", fontSize: "28px"}} /></Text> GitHub</Flex>
                         </Link>
                     </VStack>
-                    <Text alignSelf={'start'} paddingTop={3} color={'yellow.200'}>
-                        Driven full-stack developer, wannabe machine learning engineer.
+                    <Text alignSelf={'start'} paddingTop={3} color={'yellow.200'}> 
+                        I am a high analytical and driven software developer, who currently specializes in web technologies with a focus on frontend development.
+                        My current development stack includes Django, React.js, Chakra-UI, Redux, PostgreSQL and Docker. 
                     </Text>
                 </VStack>
         </Card>
