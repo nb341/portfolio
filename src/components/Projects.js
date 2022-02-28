@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Text, Link, Image, ButtonGroup, Button } from "@chakra-ui/react";
+import { Box, Text, Link, Image, ButtonGroup, Button, AlertDialog } from "@chakra-ui/react";
 import imgUploader from '../assets/image-uploader.png';
-
-
+import patientForm from '../assets/Patient-Registration-Form.png';
+import mapDragger from "../assets/mapDragger.png";
 const ProjectItem = (props) => {
     const {img, description, tags, title, code, demo} = props;
     return(
@@ -18,6 +18,7 @@ const ProjectItem = (props) => {
                 borderWidth='0' 
                 overflow='hidden'
                 boxShadow={'dark-lg'}
+                mt={'32px'}
                 >   
                
                 <Image h={'274px'} w={'322px'} src={img} borderRadius={'lg'} mr={{ lg:'32px'}} opacity={0.8}/>
@@ -96,6 +97,30 @@ export default function Projects(){
                 title={'Image Uploader'}
                 description={'In this project I use React.js and CSS for the frontend as well as Redux for state management. I also use NodeJS to handle upload and storage to the server.'}
                 />
+            <ProjectItem 
+                tags={['HTML', 'CSS', 'Bootstrap', 'Responsive']}
+                code={"https://github.com/nb341/systemaid"}
+                demo={"https://systemaid-nb341.vercel.app/"}
+                img={patientForm}
+                title={'Patient Registration Form'}
+                description={'In this project I use Twitter Bootstrap, CSS, HTML to construct a patient registration form.'}
+                />
+            <ProjectItem 
+                tags={['HTML', 'CSS', 'JavaScript', 'LeafletJS']}
+                code={"https://github.com/nb341/leaflet-map"}
+                demo={"https://leaflet-map-sooty.vercel.app/"}
+                img={mapDragger}
+                title={'Draggable Marker'}
+                description={'In this project I use LeafletJS to create a draggable marker which returns the coordinates and address wherever the marker lands.'}
+                />
+                <Text                     padding={'22px'} 
+                    bgColor={'#241663'}  
+                    borderRadius={'lg'} 
+                    mt={'32px'}
+                    borderWidth='0' 
+                    overflow='hidden'
+                    boxShadow={'dark-lg'}
+                    color={'yellow.200'}>More projects to come once I've deployed them till then check my <Link color={'pink.400'} fontWeight={'600'} textDecoration={'underline'} href="https://github.com/nb341" isExternal>GitHub</Link></Text>
         </Box>
     )
 }
