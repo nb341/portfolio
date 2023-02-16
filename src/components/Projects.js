@@ -92,7 +92,7 @@ export default function Projects(){
             <ProjectItem 
                 tags={['JSX','ReactJS', 'NodeJS','CSS', 'Redux']}
                 code={"https://github.com/nb341/Image-Uploader"}
-                demo={"https://image-uploader-project.herokuapp.com/"}
+                demo={"https://image-uploader-08jw.onrender.com/"}
                 img={imgUploader}
                 title={'Image Uploader'}
                 description={'In this project I use React.js and CSS for the frontend as well as Redux for state management. I also use NodeJS to handle upload and storage to the server.'}
