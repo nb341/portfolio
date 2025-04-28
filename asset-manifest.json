@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/static/js/main.9ba895d5.js",
+    "static/js/377.2bf5b29e.chunk.js": "/static/js/377.2bf5b29e.chunk.js",
+    "static/media/Patient-Registration-Form.png": "/static/media/Patient-Registration-Form.2fecbd2cb698bb847687.png",
+    "static/media/image-uploader.png": "/static/media/image-uploader.22e8beb67186bb538756.png",
+    "static/media/mapDragger.png": "/static/media/mapDragger.f114e40dde19fae16a93.png",
+    "static/media/turing_profile.jpg": "/static/media/turing_profile.f1776038981ef960a2a6.jpg",
+    "index.html": "/index.html",
+    "main.9ba895d5.js.map": "/static/js/main.9ba895d5.js.map",
+    "377.2bf5b29e.chunk.js.map": "/static/js/377.2bf5b29e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9ba895d5.js"
+  ]
+}
